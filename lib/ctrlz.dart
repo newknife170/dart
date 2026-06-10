@@ -37,7 +37,22 @@ double leernumdouble(String msj) {
       numero = double.parse(stdin.readLineSync().toString());
       return numero;
     } catch (e) {
-      print('DEBE LEER BIEN AHI DICE "DEBES ESCRIBIR UN NUMERO REALISTICO!!!!!"');
+      print(
+        'DEBE LEER BIEN AHI DICE "DEBES ESCRIBIR UN NUMERO REALISTICO!!!!!"',
+      );
+    }
+  }
+}
+
+String leerstr(String msj) {
+  String alias = '';
+  while (true) {
+    stdout.write('$msj: ');
+    alias = stdin.readLineSync().toString();
+    if (alias.trim().isNotEmpty) {
+      return alias.trim();
+    } else {
+      print('DEBE LEER BIEN AHI DICE "DEBES TU ALIAS!!!!!"');
     }
   }
 }

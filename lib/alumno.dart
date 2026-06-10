@@ -21,7 +21,35 @@ class Alumno {
     required this.turno,
   });
 
-  String nombrecompleto() {
+  String get nombrecompleto {
     return '${nombre.toUpperCase()} ${apellido.toUpperCase()}';
   }
+
+  String get sexodelalumno {
+    if (sexo == true) {
+      return 'Femenino';
+    } else {
+      return 'Masculino';
+    }
+  }
+
+  String get turnodelalumno {
+    if (turno == 1) {
+      return 'Mañana';
+    } else if (turno == 2) {
+      return 'Tarde';
+    } else if (turno == 3) {
+      return 'Noche';
+    } else {
+      return 'No tiene turno';
+    }
+  }
+  /*String get turnodelalumno {
+    switch (turno) {
+      case 1: return 'Mañana';
+      case 2: return 'Tarde';                     *Tambien se puede hacer asi con un switch*
+      case 3: return 'Noche';
+      default: return 'Inexistente o perdido';
+    }
+  }*/
 }
